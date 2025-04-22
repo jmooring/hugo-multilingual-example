@@ -1,3 +1,6 @@
+/* Base */
+/* ------------------------------------------------------------------------- */
+
 body {
   color: #222;
   font-family: sans-serif;
@@ -5,6 +8,14 @@ body {
   margin: 1rem;
   max-width: 768px;
 }
+
+a {
+  color: #00e;
+  text-decoration: none;
+}
+
+/* Components */
+/* ------------------------------------------------------------------------- */
 
 header {
   border-bottom: 1px solid #222;
@@ -16,11 +27,36 @@ footer {
   margin-top: 1rem;
 }
 
-a {
-  color: #00e;
-  text-decoration: none;
+/* Code blocks */
+/* ------------------------------------------------------------------------- */
+
+/* Applies when there are no line numbers, or when line numbers are inline. */
+.highlight > pre {
+  padding: 1em 0 1em 1em;
 }
 
-.active {
-  background-color: yellow;
+/* Applies when line numbers are in a table cell. */
+.highlight div {
+  padding: 0 0 0 1em;
+}
+
+/* Applies to all. */
+.highlight div,
+.highlight > pre {
+  overflow-x: auto;
+  border-radius: 0.5em;
+  /* add border-radius and box-shadow here */
+}
+
+/* Applies when using an external style sheet. */
+/* https://github.com/alecthomas/chroma/issues/722 */
+.highlight .chroma .lntable .lnt,
+.highlight .chroma .lntable .hl {
+  display: flex;
+}
+
+/* Applies when using an external style sheet. */
+/* https://github.com/alecthomas/chroma/issues/722 */
+.highlight .chroma .lntable .lntd + .lntd {
+  width: 100%;
 }

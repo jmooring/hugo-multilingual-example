@@ -11,7 +11,7 @@ For a given taxonomy, renders a list of terms assigned to the page.
 {{- $taxonomy := .taxonomy }}
 
 {{- with $page.GetTerms $taxonomy }}
-  {{- $label := (index . 0).Parent.LinkTitle }}
+  {{- $label := (index . 0).Parent.LinkTitle | title }}
   <div>
     <div>{{ $label }}:</div>
     <ul>
