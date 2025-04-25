@@ -1,6 +1,4 @@
 baseURL       = 'https://example.org/'
-languageCode  = 'en-US'
-title         = 'Hosting Test - Template'
 enableGitInfo = true
 
 defaultContentLanguage         = 'en'
@@ -21,14 +19,14 @@ defaultContentLanguageInSubdir = true
   languageCode      = 'en-US'
   languageDirection = 'ltr'
   languageName      = 'English'
-  title             = 'My New Hugo Site (en)'
+  title             = 'Hugo Multilingual Example (en)'
   weight            = 1
 
 [languages.de]
   languageCode      = 'de-DE'
   languageDirection = 'ltr'
   languageName      = 'Deutsch'
-  title             = 'My New Hugo Site (de)'
+  title             = 'Hugo Multilingual Example (de)'
   weight            = 2
 
 # -----------------------------------------------------------------------------
@@ -85,4 +83,4 @@ defaultContentLanguageInSubdir = true
 
 [module.hugoVersion]
   extended = true
-  min      = '0.146.7'
+  min      = '0.147.0'
