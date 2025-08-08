@@ -1,0 +1,86 @@
+baseURL       = 'https://example.org/'
+enableGitInfo = true
+
+defaultContentLanguage         = 'en'
+defaultContentLanguageInSubdir = true
+
+# -----------------------------------------------------------------------------
+# Caches
+# -----------------------------------------------------------------------------
+
+[caches.images]
+  dir = ':cacheDir/images'
+
+# -----------------------------------------------------------------------------
+# Languages
+# -----------------------------------------------------------------------------
+
+[languages.en]
+  languageCode      = 'en-US'
+  languageDirection = 'ltr'
+  languageName      = 'English'
+  title             = 'Hugo Multilingual Example (en)'
+  weight            = 1
+
+[languages.de]
+  languageCode      = 'de-DE'
+  languageDirection = 'ltr'
+  languageName      = 'Deutsch'
+  title             = 'Hugo Multilingual Example (de)'
+  weight            = 2
+
+# -----------------------------------------------------------------------------
+# Markup
+# -----------------------------------------------------------------------------
+
+[markup.goldmark.renderHooks.image]
+  enableDefault = true # superfluous because this is automatically enabled for multilingual single host sites
+
+[markup.goldmark.renderHooks.link]
+  enableDefault = true # superfluous because this is automatically enabled for multilingual single host sites
+
+# -----------------------------------------------------------------------------
+# Menus - English
+# -----------------------------------------------------------------------------
+
+[[languages.en.menus.main]]
+  name    = 'Home'
+  pageRef = '/'
+  weight  = 10
+
+[[languages.en.menus.main]]
+  name    = 'Posts'
+  pageRef = '/posts'
+  weight  = 20
+
+[[languages.en.menus.main]]
+  name    = 'Tags'
+  pageRef = '/tags'
+  weight  = 30
+
+# -----------------------------------------------------------------------------
+# Menus - Deutsch
+# -----------------------------------------------------------------------------
+
+[[languages.de.menus.main]]
+  name    = 'Home'
+  pageRef = '/'
+  weight  = 10
+
+[[languages.de.menus.main]]
+  name    = 'Posts'
+  pageRef = '/posts'
+  weight  = 20
+
+[[languages.de.menus.main]]
+  name    = 'Tags'
+  pageRef = '/tags'
+  weight  = 30
+
+# -----------------------------------------------------------------------------
+# Module
+# -----------------------------------------------------------------------------
+
+[module.hugoVersion]
+  extended = true
+  min      = '0.147.0'
