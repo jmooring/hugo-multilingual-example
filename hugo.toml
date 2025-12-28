@@ -34,10 +34,10 @@ defaultContentLanguageInSubdir = true
 # -----------------------------------------------------------------------------
 
 [markup.goldmark.renderHooks.image]
-  useEmbedded = 'fallback' # superfluous because this is automatically enabled for multilingual single host sites
+  useEmbedded = 'always' # superfluous because this is automatically enabled for multilingual single host sites
 
 [markup.goldmark.renderHooks.link]
-  useEmbedded = 'fallback' # superfluous because this is automatically enabled for multilingual single host sites
+  useEmbedded = 'always' # superfluous because this is automatically enabled for multilingual single host sites
 
 # -----------------------------------------------------------------------------
 # Menus - English
