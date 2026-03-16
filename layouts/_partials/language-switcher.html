@@ -1,13 +1,17 @@
-{{ with .AllTranslations }}
-  <nav class="nav-inline language-switcher">
+{{ with .Rotate "language" }}
+  <nav class="nav-inline language-selector">
     <ul>
       {{ range . }}
-        {{ if eq .Language.Lang $.Language.Lang }}
-          <li><a aria-current="page" class="active" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ if eq .Language $.Language }}
+          <li class="active">
+            <a aria-current="page" href="{{ .Permalink }}" hreflang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
+          </li>
         {{ else }}
-          <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+          <li>
+            <a href="{{ .Permalink }}" hreflang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
+          </li>
         {{ end }}
       {{ end }}
     </ul>
   </nav>
-{{ end }}
+{{ end }}lan

@@ -11,27 +11,27 @@ defaultContentLanguageInSubdir = true
 [caches.images]
   dir = ':cacheDir/images'
 
-# -----------------------------------------------------------------------------
-# Languages
-# -----------------------------------------------------------------------------
+  # -----------------------------------------------------------------------------
+  # Languages
+  # -----------------------------------------------------------------------------
 
 [languages.en]
-  languageCode      = 'en-US'
-  languageDirection = 'ltr'
-  languageName      = 'English'
-  title             = 'Hugo Multilingual Example (en)'
-  weight            = 1
+  locale    = 'en-US'
+  direction = 'ltr'
+  label     = 'English'
+  title     = 'Hugo Multilingual Example (en)'
+  weight    = 1
 
 [languages.de]
-  languageCode      = 'de-DE'
-  languageDirection = 'ltr'
-  languageName      = 'Deutsch'
-  title             = 'Hugo Multilingual Example (de)'
-  weight            = 2
+  locale    = 'de-DE'
+  direction = 'ltr'
+  label     = 'Deutsch'
+  title     = 'Hugo Multilingual Example (de)'
+  weight    = 2
 
-# -----------------------------------------------------------------------------
-# Markup
-# -----------------------------------------------------------------------------
+  # -----------------------------------------------------------------------------
+  # Markup
+  # -----------------------------------------------------------------------------
 
 [markup.goldmark.renderHooks.image]
   useEmbedded = 'always' # superfluous because this is automatically enabled for multilingual single host sites
@@ -39,43 +39,43 @@ defaultContentLanguageInSubdir = true
 [markup.goldmark.renderHooks.link]
   useEmbedded = 'always' # superfluous because this is automatically enabled for multilingual single host sites
 
-# -----------------------------------------------------------------------------
-# Menus - English
-# -----------------------------------------------------------------------------
+  # -----------------------------------------------------------------------------
+  # Menus - English
+  # -----------------------------------------------------------------------------
 
-[[languages.en.menus.main]]
-  name    = 'Home'
-  pageRef = '/'
-  weight  = 10
+  [[languages.en.menus.main]]
+    name    = 'Home'
+    pageRef = '/'
+    weight  = 10
 
-[[languages.en.menus.main]]
-  name    = 'Posts'
-  pageRef = '/posts'
-  weight  = 20
+  [[languages.en.menus.main]]
+    name    = 'Posts'
+    pageRef = '/posts'
+    weight  = 20
 
-[[languages.en.menus.main]]
-  name    = 'Tags'
-  pageRef = '/tags'
-  weight  = 30
+  [[languages.en.menus.main]]
+    name    = 'Tags'
+    pageRef = '/tags'
+    weight  = 30
 
 # -----------------------------------------------------------------------------
 # Menus - Deutsch
 # -----------------------------------------------------------------------------
 
-[[languages.de.menus.main]]
-  name    = 'Home'
-  pageRef = '/'
-  weight  = 10
+  [[languages.de.menus.main]]
+    name    = 'Home'
+    pageRef = '/'
+    weight  = 10
 
-[[languages.de.menus.main]]
-  name    = 'Posts'
-  pageRef = '/posts'
-  weight  = 20
+  [[languages.de.menus.main]]
+    name    = 'Posts'
+    pageRef = '/posts'
+    weight  = 20
 
-[[languages.de.menus.main]]
-  name    = 'Tags'
-  pageRef = '/tags'
-  weight  = 30
+  [[languages.de.menus.main]]
+    name    = 'Tags'
+    pageRef = '/tags'
+    weight  = 30
 
 # -----------------------------------------------------------------------------
 # Module
